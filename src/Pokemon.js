@@ -3,10 +3,6 @@ import fetchPokemon from "./fetchPokemon";
 import { useQuery } from "react-query";
 
 const Pokemon = ({ id }) => {
-  const { data: pokemon, isLoading, error } = useQuery(
-    ["pokemon", { id }],
-    fetchPokemon
-  );
 
   return isLoading ? (
     <div>loading...</div>
